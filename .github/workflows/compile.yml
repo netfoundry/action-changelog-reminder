@@ -1,8 +1,8 @@
 name: "Compile typescript into one file"
 on:
   push:
-    branches: 
-      - master
+    branches:
+      - main
 
 jobs:
   compile-typescript:
