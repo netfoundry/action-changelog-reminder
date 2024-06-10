@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: compile all typescript files into one javascript file
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     
     - name: "npm ci"
       run: npm ci
@@ -18,7 +18,7 @@ jobs:
       run: npm run dist
       
     - name: "push compiled file"
-      uses: alexesprit/action-update-file@v0.1.0
+      uses: alexesprit/action-update-file@v1.8.0
       with:
         file-path: dist/index.js
         commit-msg: Compile all ts into one file
